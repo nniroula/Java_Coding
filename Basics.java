@@ -29,7 +29,7 @@
  *      char(16 bits)
  * 
  * NOTE: Every number with decimal in java is treated as double. So, use f or F at the end to represent float.
- *  Eg: 34.5f, or 34.5F
+ *  Eg: float age = 34.5f; or float age = 34.5F;
  */
 
 //  Q1. create a class and declare method in it to be static, and call that method in top-level class
@@ -41,7 +41,17 @@ public class Basics{
     public static void main(String []args){
 
         // Basic syntax
-        System.out.println("Hellow Developers out there!!!");
         System.out.println("This is Nabin getting ready for full stack java development");
+
+        // Casting - implicit casting and explicit casting
+
+        // implicit casting -> compiler converts smaller type to bigger type
+        int num1 = 24;
+        double num2 = num1; 
+        // System.out.println(num2);
+
+        double value1 = 34.5;
+        int modified1 = (int) value1;  // trauncated the decimal part
+        // System.out.println(modified1);
     }
 }

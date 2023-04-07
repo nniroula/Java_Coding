@@ -4,6 +4,7 @@
 
 import java.util.Arrays;
 
+
 public class Strings {
     public static void main(String []args){
         /**
@@ -81,7 +82,19 @@ public class Strings {
         System.out.println(str1.contains("av"));
         System.out.println(str2.contains("gg"));
 
-        // 8. Concatenate two strings
+
+        // 9. replace() -> to replace characters or substrings in a given string
+        String myLang = "JavaScript";
+        String javaLang = myLang.replace("JavaScript", "Java");
+        // System.out.println(javaLang);
+
+        // 10. Concatenate two strings
+        String a = new String("Language is JAVA and ");
+        String b = new String("Backend framework is Springboot.");
+        String concatenated = a + b;
+        System.out.println(concatenated);
 
     }
 }
+
+

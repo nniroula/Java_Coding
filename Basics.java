@@ -16,6 +16,22 @@
  *      final keyword means once value is assigned it can never be changed (final int age = 27)
  */
 
+//  2 data types - Primitive data types and Reference data types
+/**
+ *  8 primiitve data types
+ *      byte(8 bits), 
+ *      short(16 bits), 
+ *      int(32 bits or 4 bytes), 
+ *      long(64 bits), 
+ *      float(32 bits, it is single precision), 
+ *      double(64 bits, double precision), 
+ *      boolean, 
+ *      char(16 bits)
+ * 
+ * NOTE: Every number with decimal in java is treated as double. So, use f or F at the end to represent float.
+ *  Eg: 34.5f, or 34.5F
+ */
+
 //  Q1. create a class and declare method in it to be static, and call that method in top-level class
 
 

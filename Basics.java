@@ -53,5 +53,19 @@ public class Basics{
         double value1 = 34.5;
         int modified1 = (int) value1;  // trauncated the decimal part
         // System.out.println(modified1);
+
+        float price = 12.5F;
+        // System.out.println(price);
+        // string float format 1
+        String floatPrice = String.format("Price is %f ", price); // returns 12.500000
+        // System.out.println(floatPrice);
+
+        // string float format 2
+        String floatPrice2 = String.format("Price is %12.3f", price); // returns    12.500(right aligned)
+        // System.out.println(floatPrice2);
+
+        // - (hyphen) indicates left alignment
+        // System.out.printf("The floating point price is %-12.3f", price);
+        // System.out.println();
     }
 }

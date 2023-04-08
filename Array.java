@@ -120,7 +120,21 @@ public class Array {
         // access value 2 in first array
         int value2 = nums3[0][1]; // 0 = first array, 1 = index 1 of that first array
         System.out.println(value2);
-    }
 
-  
+        // compare 2D arrays with Arrays.deepEquals(arr1, arr2)
+
+        int nums_arr1[][] = { {1, 2, 3}, {4, 5, 6} };
+        int nums_arr2 [][] = { {2, 4, 6}, {3, 6, 9} };
+
+        boolean val = Arrays.deepEquals(nums_arr1, nums_arr2);  // false
+        System.out.println(val);
+
+        
+        /* For .. Each loop */
+        // if you do not need index, use for ... each loop
+        char letters[] = {'a', 'c', 'd'};
+        for(char character: letters){       // data type should be same as the array data type
+            System.out.println(character);
+        }
+    }
 }

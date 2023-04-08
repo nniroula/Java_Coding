@@ -93,19 +93,33 @@ public class Array {
         nums2[2] = arr3;
         System.out.println(Arrays.toString(nums2));
 
+        /* 
         // print individual elements in the 2D array
         for(int i = 0; i< nums2.length; i++){
             for (int j = 0; j< nums2.length; j++){
                 System.out.println(nums2[i][j]);
             }
         }
-
         // print out arrays in 2D array
         for(int i = 0; i< nums2.length; i++){
             System.out.println(Arrays.toString(nums2[i]));
         }
+        */
 
+        // declare and iniitialize 2D array in one go
+        int nums3[][] = {
+                            {1, 2, 3}, {4, 5, 6}, {7, 8, 9}
 
+                        };
+
+        System.out.println(Arrays.deepToString(nums3));
+
+        // print array at index 0
+        System.out.println(Arrays.toString(nums3[0]));
+
+        // access value 2 in first array
+        int value2 = nums3[0][1]; // 0 = first array, 1 = index 1 of that first array
+        System.out.println(value2);
     }
 
   

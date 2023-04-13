@@ -1,7 +1,11 @@
 // import java.util.InputMismatchException;
 import java.util.Scanner;
-// 1. add two numbers
+import java.util.Arrays;
+
+
 // TODO handle the exception
+
+// 1. add two numbers
 class AddTwoNumbers{
     int addTwoNumbers(int num1, int num2){
         int sum = num1 + num2;
@@ -39,6 +43,32 @@ public class BasicProblems {
     static double perimeterOfCircle(double radius){
         return 2*getPieValue()*radius;
     }
+
+     // 5. Swap values in 2 variables
+    static int []swapVariables(int para1, int para2){  // return two variables without array
+        int tempVariable;
+        tempVariable = para1;
+        para1 = para2;
+        para2 = tempVariable;
+
+        int valueSwappedArray[] = new int[2];
+        valueSwappedArray[0] = para1;
+        valueSwappedArray[1] = para2;
+        return valueSwappedArray;
+    }
+
+    //6. get user input of first and last names and concatenate them
+    static String fullName(String firstName, String lastName){
+        // String fullName = "";
+        // fullName = firstName + "" + lastName;
+        StringBuilder sb = new StringBuilder();
+        sb.append(firstName)
+            .append(" ")
+            .append(lastName);
+        // return fullName;
+        // System.out.println(sb);
+        return sb.toString();       // stringbuilder type to string type
+    } 
 
     public static void main(String []args){
       
@@ -91,6 +121,7 @@ public class BasicProblems {
 
 
         // 4. calculate perimeter of a circle
+        /* 
         try{
             System.out.print("Enter radius of a circle: ");
             double radius1 = scanner.nextDouble();
@@ -99,7 +130,26 @@ public class BasicProblems {
         }catch(Exception e){
             System.out.println("Invalid data type. Please try again.");
         }
+        */
 
+        // 5. Swap values in 2 variables
+        /* 
+        int resultantArray[] = new int[2]; //swapVariables
+        resultantArray = swapVariables(2, 4);
+        System.out.println(Arrays.toString(resultantArray));
+        */
+
+        //6. get user input of first and last names and concatenate them
+        System.out.print("Enter your first name: ");
+        String firstName = scanner.nextLine(); // or next() ->No, takes input until ""(space)
+        System.out.print("Enter you last name: ");
+        String lastName = scanner.nextLine(); // nextLine() takes input until new line(\n)
+        // String resulantNames = fullName(firstName, lastName); // cannot make static reference
+        // Name the method to be static b/c its inside static maiin method
+        String resulantNames = fullName(firstName, lastName);
+        // System.out.printf("The full name becomes %S", resulantNames); // %S converts to all caps
+        System.out.printf("The full name becomes %s", resulantNames);
+        System.out.println();
 
     }
 }

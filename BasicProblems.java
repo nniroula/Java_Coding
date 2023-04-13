@@ -98,6 +98,25 @@ public class BasicProblems {
         return result;
     }
 
+    // 9. Sum of digits in a number
+    static int sumOfDigitsInNumber(int number){
+        String numToString = Integer.toString(number); //wrapperClass.toString(value)
+        // Double.toString(number);
+        // Float.toString(number);
+        int sum = 0;
+        for(int i = 0; i<numToString.length(); i++){
+            char character = numToString.charAt(i); // char at index i in string
+            // int charValue =Integer.parseInt(String.valueOf(character));  
+            // OR
+            String charValue = Character.toString(character);  
+            // now convert to int
+            int intValue = Integer.parseInt(charValue); 
+            // parse char to integer
+            sum = sum + intValue; // charAt(i) gets ascii value, before ascii convert to int
+        }
+        return sum;
+    }
+
     public static void main(String []args){
       
         // 1. Add two numbers
@@ -202,6 +221,10 @@ public class BasicProblems {
         System.out.println(compareTwoIntegers(8, 7));
         System.out.println(compareTwoIntegers(-7, 7));
         */
+
+        // 9. Sum of digits in a number
+        System.out.println(sumOfDigitsInNumber(25));
+
 
     }
 }

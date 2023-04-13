@@ -10,16 +10,25 @@ class AddTwoNumbers{
 }
 
 public class BasicProblems {
-    static Scanner sc = new Scanner(System.in);
+    static Scanner scanner = new Scanner(System.in);
+
+    // 2. find remainder of two numbers
+    static double remainder(double num1, double num2){
+        double fractionalValue;
+        fractionalValue = num1/num2;
+        return fractionalValue;
+    }
     public static void main(String []args){
+      
         // 1. Add two numbers
+        /*
         int firstNumber;
         int secondNumber;
         try{
             System.out.print("Enter first integer: ");
-            firstNumber = sc.nextInt();
+            firstNumber = scanner.nextInt();
             System.out.print("Enter your second number: ");
-            secondNumber = sc.nextInt();
+            secondNumber = scanner.nextInt();
             AddTwoNumbers add_two_nums = new AddTwoNumbers();
             int sum;
             sum = add_two_nums.addTwoNumbers(firstNumber, secondNumber);
@@ -29,13 +38,16 @@ public class BasicProblems {
             // throw new InputMismatchException("Ivalid data type!");
             System.out.println("Invalid data type");
         }
+        */
 
-     
-
-        // int sum = add_two_nums.addTwoNumbers();
-
-
-        // 2.
+        // 2. find remainder of two numbers
+        System.out.println("Enter your first number: ");
+        double firstNum = scanner.nextDouble();
+        System.out.println("Enter your second number: ");
+        double secondNum = scanner.nextDouble();
+        double result = remainder(firstNum, secondNum);
+        System.out.printf("The remainder is %f", result);
+        System.out.println();
 
         // 3.
 

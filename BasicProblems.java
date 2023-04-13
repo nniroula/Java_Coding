@@ -85,6 +85,19 @@ public class BasicProblems {
         return odds;
     }
 
+    // 8. compare two integers
+    static String compareTwoIntegers(int num1, int num2){
+        String result = "";
+        if(num1 < num2){
+            result = "Num2 is smaller";
+        }else if(num1 > num2){
+            result = "Num1 is greater";
+        }else if(num1 == num2){
+            result = "Both numbers are equal";
+        }
+        return result;
+    }
+
     public static void main(String []args){
       
         // 1. Add two numbers
@@ -182,6 +195,12 @@ public class BasicProblems {
         System.out.println(oddNumbers.remove(indexOfNinetySeven));
         // now make sure 99 and 97 are removed
         System.out.println(oddNumbers);
+        */
+
+        // 8. compare two integers
+        /* 
+        System.out.println(compareTwoIntegers(8, 7));
+        System.out.println(compareTwoIntegers(-7, 7));
         */
 
     }

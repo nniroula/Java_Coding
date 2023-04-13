@@ -34,6 +34,12 @@ public class BasicProblems {
         double area = PIE * radius*radius;
         return area;
     }
+
+    // 4. calculate perimeter of a circle
+    static double perimeterOfCircle(double radius){
+        return 2*getPieValue()*radius;
+    }
+
     public static void main(String []args){
       
         // 1. Add two numbers
@@ -66,10 +72,13 @@ public class BasicProblems {
         System.out.printf("The remainder is %f", result);
         System.out.println();
         */
+
+      
         // 3. find an area of a circle
         // System.out.println(APIE);
         // System.out.println(PIE_VALUE);
         // System.out.println(PIE_VAL);
+        /* 
         try{
             System.out.print("Enter radius of the circle: ");
             double radius = scanner.nextDouble();
@@ -78,8 +87,19 @@ public class BasicProblems {
         }catch(Exception e){
             System.out.println("Invalid input data");
         }
-  
+        */
 
-        // 4.
+
+        // 4. calculate perimeter of a circle
+        try{
+            System.out.print("Enter radius of a circle: ");
+            double radius1 = scanner.nextDouble();
+            System.out.printf("Perimeter of the circle is %.3f", perimeterOfCircle(radius1));
+            System.out.println();
+        }catch(Exception e){
+            System.out.println("Invalid data type. Please try again.");
+        }
+
+
     }
 }

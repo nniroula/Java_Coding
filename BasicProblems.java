@@ -1,6 +1,8 @@
 // import java.util.InputMismatchException;
 import java.util.Scanner;
+import java.util.TooManyListenersException;
 import java.util.Arrays;
+import java.util.ArrayList;
 
 
 // TODO handle the exception
@@ -66,9 +68,22 @@ public class BasicProblems {
             .append(" ")
             .append(lastName);
         // return fullName;
-        // System.out.println(sb);
+        // System.out.println(sb); // does not work
         return sb.toString();       // stringbuilder type to string type
     } 
+
+     // 7. print all odds from 0 to 99
+    //  int[] displayAllOdds(){ -> you don't know lenght, so use ArrayList
+    static ArrayList<Integer> displayAllOdds(){
+        // int odds[] = new int[]; -> you don't know lenght, so use ArrayList
+        ArrayList<Integer> odds = new ArrayList<Integer>();
+        for(int i = 0; i < 100; i++){
+            if(i%2 == 1){
+                odds.add(i);
+            }
+        }
+        return odds;
+    }
 
     public static void main(String []args){
       
@@ -140,6 +155,7 @@ public class BasicProblems {
         */
 
         //6. get user input of first and last names and concatenate them
+        /* 
         System.out.print("Enter your first name: ");
         String firstName = scanner.nextLine(); // or next() ->No, takes input until ""(space)
         System.out.print("Enter you last name: ");
@@ -150,6 +166,23 @@ public class BasicProblems {
         // System.out.printf("The full name becomes %S", resulantNames); // %S converts to all caps
         System.out.printf("The full name becomes %s", resulantNames);
         System.out.println();
+        */
+
+        // 7. print all odds from 0 to 99
+        /* 
+        ArrayList<Integer> oddNumbers = displayAllOdds();
+        // System.out.println(oddNumbers.toString());
+        System.out.println(oddNumbers); // in case this does not work, use the above
+        // get each element from the arraylist
+        System.out.println(oddNumbers.get(1)); // returns 3
+        // remove an element from the arraylist
+        System.out.println(oddNumbers.remove(oddNumbers.size() - 1)); // removes 99
+        // find the index of 97 and remove it
+        int indexOfNinetySeven = oddNumbers.indexOf(97);
+        System.out.println(oddNumbers.remove(indexOfNinetySeven));
+        // now make sure 99 and 97 are removed
+        System.out.println(oddNumbers);
+        */
 
     }
 }

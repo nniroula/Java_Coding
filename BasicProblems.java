@@ -117,6 +117,15 @@ public class BasicProblems {
         return sum;
     }
 
+    // 10. Reverse the string
+    static String reverseString(String str){
+        String reversed = "";
+        for(int i = 0; i< str.length(); i++){
+            reversed = str.charAt(i) + reversed;
+        }
+        return reversed;
+    }
+
     public static void main(String []args){
       
         // 1. Add two numbers
@@ -223,7 +232,14 @@ public class BasicProblems {
         */
 
         // 9. Sum of digits in a number
+        /* 
         System.out.println(sumOfDigitsInNumber(25));
+        */
+
+        // 10. Reverse the string
+        System.out.println(reverseString("abcd"));
+
+
 
 
     }

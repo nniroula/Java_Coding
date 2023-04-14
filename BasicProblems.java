@@ -238,6 +238,8 @@ public class BasicProblems {
 
         // 10. Reverse the string
         System.out.println(reverseString("abcd"));
+        System.out.println(reverseString("1234"));
+        System.out.println(reverseString("nabin Niroula"));
 
 
 

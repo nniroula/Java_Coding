@@ -126,6 +126,18 @@ public class BasicProblems {
         return reversed;
     }
 
+    // 11. write to function to tell if a string is a palindrome
+    boolean palindrome(String str){
+        boolean palindromeString = false;
+        int startingIndex = 0;
+        int lastIndex = str.length() - 1;
+        int middleIndex = Math.round((startingIndex + lastIndex)/2);
+        for(int i = 0; i< str.length(); i++){   //abba 1st, last, middle
+
+        }
+        return palindromeString;
+    }
+
     public static void main(String []args){
       
         // 1. Add two numbers
@@ -241,6 +253,9 @@ public class BasicProblems {
         System.out.println(reverseString("1234"));
         System.out.println(reverseString("nabin Niroula"));
 
+        // 11. write to function to tell if a string is a palindrome
+        System.out.println(Math.round((5)/2));
+        Math.
 
 
 

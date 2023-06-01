@@ -42,6 +42,5 @@ public class GettersAndSetters {
         setter.setName("Prinsha"); // updates new name here
         System.out.printf("New name is now %s ", setter.name);
         System.out.println();
-      
     }
 }

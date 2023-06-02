@@ -49,8 +49,11 @@ import java.util.List;
         ArrayList<String> str = new ArrayList<>();
         str.add("Nabin");
         str.add("pabitra");
-        // update value at index 0
-        str.add(0, "John Doe"); // replace the value at given index
+        // insert value at index 0
+        str.add(0, "John Doe");
+        
+        // update the value at index 1(Nabin). Change Nabin to Donald Trump
+        str.set(1, "Donald Trump");
 
         // access values
         String val1 = str.get(0);
@@ -64,10 +67,41 @@ import java.util.List;
         }
         System.out.println("Done traditional for loop *** ");
 
+        System.out.println("ForEach loop on fire ...");
+        for(String entry: str){
+            System.out.println(entry);
+        }
+        System.out.println("ForEach loop DONE ***");
+
         return str;
     }
 
     // check if arraylist contains an element, pass arraylist as parameter
+    public boolean checkElemInArrayList(String str, ArrayList<String> al){
+        // traditional for loop
+        /** 
+        for(int i = 0; i<al.size(); i++){
+            if(al.get(i) == str){
+                return true;
+            }
+        }
+        */
+
+        // forEach loop
+        for(String entryInal: al){
+            if(entryInal == str){
+                return true;
+            }
+        }
+        
+        // array list contains method
+        /** 
+        if(al.contains(str)){
+            return true;
+        }
+        */
+        return false;
+    }
  }
 
 
@@ -89,6 +123,17 @@ public class ListInterface{
         // access and update arraylist elements method
         ArrayList<String> str1 = arrayList.accessAndUpdateElems();
         System.out.println(str1);
+
+        // check elem in array list function
+        ArrayList<String> arrayList1 = new ArrayList<>();
+        arrayList1.add("CU Denver");
+        arrayList1.add("MSU Denver");
+        arrayList1.add("CCA");
+
+        boolean result1 = arrayList.checkElemInArrayList("CCA", arrayList1);
+        System.out.println(result1);
+        boolean result2 = arrayList.checkElemInArrayList("Spring Board", arrayList1); // false
+        System.out.println(result2);
 
     }
     

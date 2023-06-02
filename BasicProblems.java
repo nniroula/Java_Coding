@@ -255,7 +255,7 @@ public class BasicProblems {
 
         // 11. write to function to tell if a string is a palindrome
         System.out.println(Math.round((5)/2));
-        Math.
+    
 
 
 

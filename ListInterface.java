@@ -7,8 +7,9 @@ import java.util.List;
  * implement ArrayList, LinkedList, Stack, and Vector
  */
 
- /** ArrayList, also using List */
- class ArrayListImplementation{
+
+/** 1.  ArrayList, also using List */
+class ArrayListImplementation{
     // array list delcaration
     public void arrayList(){
         List<String> arrayList = new ArrayList<String>();
@@ -102,7 +103,7 @@ import java.util.List;
         */
         return false;
     }
- }
+}
 
 
 public class ListInterface{

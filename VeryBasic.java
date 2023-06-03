@@ -46,6 +46,33 @@ public class VeryBasic {
         PrintMyNameInBox name = new PrintMyNameInBox();
         name.printMyName();
 
+        // variables declarations
+        int age;
+        double price;
+        String myName;
+        long quantity;
+        short valu;
+        byte _word;
+        char a;
+            // Wrapper class variables
+            Double interest;
+            Integer numb;
+            Character p;
+            Byte b;
+            Short st;
+            Long l;
+
+        // variable initialization
+        int myAge = 0;
+        double price1 = 2.3;
+        String lastName = "";
+        char letter = 'A';
+        byte bite = 45;    // byte - accepts int and char values
+        byte bt = 'A';    // converts to ascii value, 65
+
+        System.out.println(bite);
+        System.out.println(bt);   // displays 65 - ascii value of A
+
 
 
     }

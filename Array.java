@@ -90,6 +90,17 @@ class ArrayMethods{
         }
         return maxVal;
     }
+
+    protected double minValue(double arr[]){
+        double minVal = arr[0];
+        for(double val: arr){
+            if(val < minVal){
+                minVal = val;
+            }
+        }
+        System.out.println("Minimum value is ... ");
+        return minVal;
+    }
 }
 
 public class Array {
@@ -279,10 +290,10 @@ public class Array {
     // maxValue method
     int arr4[] = {2, 4, 1, 8, 6};
     System.out.println(arrayMethod.maxValue(arr4));
-    
 
-
-
+    // minVal method
+    double[] values = {1.2, 2.4, 3.8};
+    System.out.println(arrayMethod.minValue(values));
 
     }
 }

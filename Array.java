@@ -43,6 +43,55 @@ class PartiallyFilledArrays{
     }
 }
 
+class ArrayMethods{
+    /**
+     * This is static method and will be called on class, not on object
+     * @return array
+     */
+    public static int[] arrayFilling(){
+        int arr[] = new int[3];
+        for(int i = 0; i < arr.length; i++){
+            // add even numbers to the array
+            arr[i] = i * 2;
+        }
+        return arr;
+    }
+
+    public static int sumOfElements(){
+        int arr[] = new int[3];
+        arr[0] = 2;
+        arr[1] = 8;
+        arr[2] = 32;
+        int sum = 0;
+        // enhanced for loop
+        for(int elem: arr){
+            sum += elem;
+        }
+        return sum;
+    }
+
+    protected int average(){
+        int avg = 0;
+        int arr[] = {1, 3, 5};
+        int sum = 0;
+        for(int elem: arr){
+            sum += elem;
+        }
+        avg = sum/arr.length;
+        return avg;
+    }
+
+    protected int maxValue(int arr[]){
+        int maxVal = arr[arr.length - 1];
+        for(int i = 0; i< arr.length; i++){
+            if(arr[i] > maxVal){
+                maxVal = arr[i];
+            }
+        }
+        return maxVal;
+    }
+}
+
 public class Array {
     public static void main(String []args){
         // System.out.println("Java Arrays");
@@ -211,7 +260,26 @@ public class Array {
         PartiallyFilledArrays array = new PartiallyFilledArrays();
         array.partiallyFilledArrays();
         // invoke countNumberOfElmensInArray method
-        array.countNumberOfElmensInArray();
+        // array.countNumberOfElmensInArray();
+
+        // ArrayMethod class invocation
+        int resultantArray[] = ArrayMethods.arrayFilling();
+        System.out.println(Arrays.toString(resultantArray));
+        // sum of elements
+       int sum = ArrayMethods.sumOfElements();
+       System.out.printf("Sum of array elements is %d", sum);
+       System.out.println();
+
+    //    average method
+    ArrayMethods arrayMethod = new ArrayMethods();
+    System.out.println("The average is ... ");
+    System.out.printf("The average from protected method is %d", arrayMethod.average());
+    System.out.println("\n");
+
+    // maxValue method
+    int arr4[] = {2, 4, 1, 8, 6};
+    System.out.println(arrayMethod.maxValue(arr4));
+    
 
 
 

@@ -1,4 +1,47 @@
 import java.util.Arrays;
+import java.util.Scanner;
+
+class PartiallyFilledArrays{
+    Scanner in = new Scanner(System.in);
+    /**
+     * this method is called in the main method of public class Array
+     * @return returns an array of integers
+     * fills the array partially
+     */
+    public int[] partiallyFilledArrays(){
+        int arr[] = new int[5];
+        // add array elements
+        for(int i = 0; i<3; i++){
+            arr[i] = i;
+        }
+        // print the array
+        System.out.println(Arrays.toString(arr));
+        return arr;
+    }
+
+    public int countNumberOfElmensInArray(){
+        Scanner scr = new Scanner(System.in);
+        int currentSizeOfArray = 0;
+        String arr1[] = new String[4];
+     
+        System.out.println("Enter the programming language: ");
+        String input = scr.next();
+        while(currentSizeOfArray < arr1.length) {
+            if(input.equals("q")){
+                break;
+            }else{
+                arr1[currentSizeOfArray] = input;
+                System.out.println("Enter the programming language, q for quit: ");
+                input = scr.next();
+                currentSizeOfArray++;
+            }
+           System.out.printf("Element count is %d", currentSizeOfArray);
+           System.out.println();
+        }
+        scr.close();
+        return currentSizeOfArray;
+    }
+}
 
 public class Array {
     public static void main(String []args){
@@ -136,5 +179,42 @@ public class Array {
         for(char character: letters){       // data type should be same as the array data type
             System.out.println(character);
         }
+
+        // array declarations
+        int[] nums1 = new int[4];
+        String names[] = new String[2];
+            // good way is to declare constant and use it in size
+        final int size = 4;
+        double prices [] = new double[size];
+        final int arraySize = 5;
+        String students[] = new String[arraySize];
+
+            // initialize the array
+        String [] stds = {"John Doe", "Mirela"};
+        int len = stds.length;
+       System.out.printf("The length of the initialized array is %d.", len);
+       System.out.println();
+
+        //copy the array into another, change the value in one of then, it should update both arrays
+        int [] integers = {1, 2, 3};
+        int [] integersCopy = integers;
+        System.out.println("Copied array is ...");
+        System.out.println(Arrays.toString(integersCopy));
+            // modify 2 to 0 in integerCopy array and then print out original array
+        integersCopy[1] = 0;  // this gets update in original array as well
+        System.out.println(Arrays.toString(integersCopy)); 
+        // now print out the original array
+        System.out.println(Arrays.toString(integers));
+
+
+        // Invoke partillyFilledMethod
+        PartiallyFilledArrays array = new PartiallyFilledArrays();
+        array.partiallyFilledArrays();
+        // invoke countNumberOfElmensInArray method
+        array.countNumberOfElmensInArray();
+
+
+
+
     }
 }

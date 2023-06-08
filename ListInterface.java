@@ -17,6 +17,17 @@ class ArrayListImplementation{
         arrayList.add("Joe Biden");
         arrayList.add("Kamala Harrish");
         System.out.println(arrayList);
+
+        // arraylist declarations and initializations
+        ArrayList<String> StringAl = new ArrayList<>();
+        ArrayList<Double> doubleAl = new ArrayList<>();
+        List<Float> floatAl = new ArrayList<>();
+        ArrayList<Boolean> booleanAl = new ArrayList<>();
+        ArrayList<Integer> integerAl = new ArrayList<>();
+        ArrayList<Character> characterAl = new ArrayList<>();
+        ArrayList<Byte> byteAl = new ArrayList<>();
+        ArrayList<Short> shortAl = new ArrayList<>();
+        ArrayList<Long> longAl = new ArrayList<>();
     }
 
     // array list functions
@@ -89,8 +100,8 @@ class ArrayListImplementation{
         */
 
         // forEach loop
-        for(String entryInal: al){
-            if(entryInal == str){
+        for(String entryInAl: al){
+            if(entryInAl == str){
                 return true;
             }
         }
@@ -103,9 +114,23 @@ class ArrayListImplementation{
         */
         return false;
     }
+
+    // arrayList as a parameter to the function
+    public ArrayList<String> alParameterizedFunc(ArrayList<String> names){
+        // ArrayList<String> languages = new ArrayList<>();
+        names.set(0, "COBALT");
+        for(String element: names){
+            System.out.println(element);
+            
+        }
+
+        return names;
+    }
+
 }
 
 
+/** It is the main class that implements other classes in this file */
 public class ListInterface{
     public static void main(String[]args){
         ArrayListImplementation arrayList = new ArrayListImplementation();
@@ -135,6 +160,18 @@ public class ListInterface{
         System.out.println(result1);
         boolean result2 = arrayList.checkElemInArrayList("Spring Board", arrayList1); // false
         System.out.println(result2);
+
+        // alParameterizedFunc call
+        ArrayList<String> langs = new ArrayList<>();
+        langs.add("Java");
+        langs.add(0, "HTML");
+        langs.add("Python");
+        langs.add("JS");
+
+        ArrayList<String> list = arrayList.alParameterizedFunc(langs);
+        System.out.println(list);
+        System.out.printf("The size of array list is %d.",list.size());
+        System.out.println();
 
     }
     

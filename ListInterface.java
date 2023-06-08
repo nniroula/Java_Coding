@@ -138,6 +138,16 @@ class ArrayListImplementation{
         return arr1;
     }
 
+    // copying arraylist -> reference type, copying holds two references to same AL
+    public static ArrayList<Boolean> copyArrayList(ArrayList<Boolean> values){
+        // copy the arraylist, both arraylists will print same output due to reference.
+        ArrayList<Boolean> boolAL = values;
+        boolAL.add(false);
+        System.out.println("Printing the original AL ...");
+        System.out.println(values);
+        return boolAL;
+    }
+
 }
 
 
@@ -192,6 +202,12 @@ public class ListInterface{
         int [] numbers = arrayList.convertArrayListToArray(alIntegers);
         System.out.println(Arrays.toString(numbers));
 
+        // copyArrayList method invocation
+        ArrayList<Boolean> bl = new ArrayList<>();
+        bl.add(true);
+        bl.add(true);
+        ArrayList<Boolean> resultantAL = ArrayListImplementation.copyArrayList(bl); // static method called on class, not on object
+        System.out.println(resultantAL);
     }
     
 }

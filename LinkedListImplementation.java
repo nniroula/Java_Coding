@@ -69,8 +69,23 @@ class LinkedListPractice{
         list.remove(2); // 2 = index
         list.remove(list.size() - 2);
 
-
         return list;
+    }
+
+    public String getElement(LinkedList<String> list){
+        String str = null;
+        str = list.getFirst();
+        str = list.getLast();
+        str = list.get(1);
+        str = list.get(list.size() - 1);
+
+        // print all elements
+        for(String element: list){
+            System.out.print(element + " ");
+        }
+        System.out.println();
+        
+        return str;
     }
  
 }
@@ -86,5 +101,13 @@ public class LinkedListImplementation{
         // removeElement method
         LinkedList<Integer> resultantList2 = list.removeElement();
         System.out.println(resultantList2);
+
+        // getElement method
+        LinkedList<String> linkedList1 = new LinkedList<>();
+        linkedList1.addFirst("ACC");
+        linkedList1.addLast("CU-Denver");
+        linkedList1.add(1, "MSU-Denver");
+        String resultantString = list.getElement(linkedList1);
+        System.out.println(resultantString);
     }
 }

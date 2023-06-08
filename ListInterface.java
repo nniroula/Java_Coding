@@ -1,5 +1,6 @@
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 /**
@@ -127,6 +128,16 @@ class ArrayListImplementation{
         return names;
     }
 
+    // array list as parameter to a function
+    public int[] convertArrayListToArray(ArrayList<Integer> integers){
+
+        int [] arr1 = new int[integers.size()];
+        for(int i =0; i< arr1.length; i++){
+            arr1[i] = integers.get(i);
+        }
+        return arr1;
+    }
+
 }
 
 
@@ -172,6 +183,14 @@ public class ListInterface{
         System.out.println(list);
         System.out.printf("The size of array list is %d.",list.size());
         System.out.println();
+
+        // convertArrayListToArray method invocation
+        ArrayList<Integer> alIntegers = new ArrayList<>();
+        alIntegers.add(1);
+        alIntegers.add(12);
+        alIntegers.add(24);
+        int [] numbers = arrayList.convertArrayListToArray(alIntegers);
+        System.out.println(Arrays.toString(numbers));
 
     }
     

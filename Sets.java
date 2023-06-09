@@ -1,5 +1,6 @@
 import java.util.HashSet;
 import java.util.Set;
+import java.util.TreeSet;
 import java.util.Iterator;
 
 // inner class
@@ -52,6 +53,19 @@ class HashSetImplementation{
     public void printSet(Set<String> set){ // Set<String> type variable
         System.out.println(set);
     }
+
+    // TreeSet implementaion, TreeSet provides natural ordering of the output. It's slow than Hashset
+    public static Set<Double> treeSetImplemenation(){
+        Set<Double> floatingPoints = new TreeSet<>();
+        floatingPoints.add(3.5);
+        floatingPoints.add(9.9);
+        floatingPoints.add(0.9);
+        System.out.println(floatingPoints.size());
+        System.out.println(floatingPoints.contains(3.5));
+        floatingPoints.remove(3.5);
+        System.out.println(floatingPoints.isEmpty());
+        return floatingPoints;
+    }
 }
 
 /**
@@ -73,6 +87,10 @@ public class Sets {
         // System.out.println(numbs);
         Set<Integer> hashSet = setObject.removeElement(numbs);
         System.out.println(hashSet);
+
+        // treeSetImplemenation static method - invoke it on its class
+        Set<Double> set3 = HashSetImplementation.treeSetImplemenation();
+        System.out.println(set3);
 
     }
     

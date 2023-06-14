@@ -10,6 +10,13 @@ import java.util.InputMismatchException;
 
 /** Write a program to guess a number that computer randomly generates */
 
+/** Test cases:
+ * 1. Enter c, and then enter number
+ * 2. c, then letter
+ * 3. c, then number, then letter
+ * 4. Enter letter other than c or q
+ */
+
 /** generatge a random number */
 class RandomNumberGenrator{
     public int getRandomNumber(){
